@@ -1,6 +1,25 @@
 # StardewIngredients
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
+version 17.0.5.
+
+## TODO
+- [x] Download images and call them locally
+- [x] Enter actual recipe/ingredient data
+- [x] Handle multiples of ingredients
+- [ ] Add styled header/footer with credits
+- [ ] Style better (fix column widths)
+- [ ] Update this README
+- [ ] Add favicon
+- [ ] Add type sections to Ingredients table
+- [ ] Add text filter to search for items
+- [ ] Add filters to look at only certain categories at a time? 
+- [ ] track or filter only loved items? 
+- [ ] add a checklist of required heart items for all recipes?
+- [ ] maybe add a display for the recipes in the box how they show up in game?
+- [ ] add version control to the key thats saved
+- [ ] maybe add type of recipe source, so you can sort by that? even if its not displayed?
+- [ ] Make sources plural? Some can be gotten in multiple ways 
 
 ## Development server
 

@@ -1,16 +1,31 @@
+<header><h1>Cooking in Stardew</h1></header>
 <main>
   <h2>Recipes</h2>
-  <table #recipeSort="matSort" matSort mat-table [dataSource]="recipeDataSource"c>
+  <table
+    #recipeSort="matSort"
+    matSort
+    mat-table
+    [dataSource]="recipeDataSource"
+    c
+  >
     <ng-container matColumnDef="cooked">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Cooked</th>
       <td mat-cell *matCellDef="let recipe">
-        <mat-checkbox [checked]="recipe.cooked" (change)="cook($event, recipe)">{{recipe.cooked}}</mat-checkbox>
+        <mat-checkbox
+          [checked]="recipe.cooked"
+          (change)="cook($event, recipe)"
+          >{{ recipe.cooked }}</mat-checkbox
+        >
       </td>
     </ng-container>
     <ng-container matColumnDef="learned">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Learned</th>
       <td mat-cell *matCellDef="let recipe">
-        <mat-checkbox [checked]="recipe.learned" (change)="learn($event, recipe)">{{recipe.learned}}</mat-checkbox>
+        <mat-checkbox
+          [checked]="recipe.learned"
+          (change)="learn($event, recipe)"
+          >{{ recipe.learned }}</mat-checkbox
+        >
       </td>
     </ng-container>
     <ng-container matColumnDef="image">
@@ -28,15 +43,15 @@
       <td mat-cell *matCellDef="let recipe">
         <ul>
           @for (ing of recipe.ingredients; track ing) {
-          <li [ngClass]="ing.collected ? 'collected' : ''">{{ ing.name }}</li>
+          <li [ngClass]="ing.collected ? 'collected' : ''">
+            {{ ing.name }} ({{ ing.quantity }})
+          </li>
           }
         </ul>
       </td>
     </ng-container>
     <ng-container matColumnDef="source">
-      <th mat-header-cell *matHeaderCellDef>
-        Recipe Source(s)
-      </th>
+      <th mat-header-cell *matHeaderCellDef>Recipe Source(s)</th>
       <td mat-cell *matCellDef="let recipe">{{ recipe.source }}</td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="recipeColumns"></tr>
@@ -44,12 +59,26 @@
   </table>
 
   <h2>Ingredients</h2>
-  <mat-checkbox [formControl]="hideUsedIngredients" (change)="toggleHideUsedIngredients($event)">Hide ingredients for recipes that have already been cooked</mat-checkbox>
-  <table mat-table #ingredientSort="matSort" matSort [dataSource]="ingredientDataSource" >
+  <mat-checkbox
+    [formControl]="hideUsedIngredients"
+    (change)="toggleHideUsedIngredients($event)"
+    >Hide ingredients for recipes that have already been cooked</mat-checkbox
+  >
+  <table
+    mat-table
+    #ingredientSort="matSort"
+    matSort
+    [dataSource]="ingredientDataSource"
+  >
     <ng-container matColumnDef="collected">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Collected</th>
       <td mat-cell *matCellDef="let ingredient">
-        <mat-checkbox [checked]="ingredient.collected" (change)="collect($event, ingredient)">{{ingredient.collected}} has recipe been cooked? {{ingredient.recipeCooked}}</mat-checkbox>
+        <mat-checkbox
+          [checked]="ingredient.collected"
+          (change)="collect($event, ingredient)"
+          >{{ ingredient.collected }} has recipe been cooked?
+          {{ ingredient.recipeCooked }}</mat-checkbox
+        >
       </td>
     </ng-container>
     <ng-container matColumnDef="image">
@@ -60,17 +89,42 @@
     </ng-container>
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-      <td mat-cell *matCellDef="let ingredient">{{ ingredient.name }}</td>
+      <td mat-cell *matCellDef="let ingredient">
+        {{ ingredient.name }} ({{ ingredient.quantity }})
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+      <td mat-cell *matCellDef="let ingredient">
+        {{ ingredient.category }}
+      </td>
     </ng-container>
     <ng-container matColumnDef="season">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Season</th>
-      <td mat-cell *matCellDef="let ingredient">{{ ingredient.season }}</td>
+      <td mat-cell *matCellDef="let ingredient">
+        @if(ingredient.seasons.length === 1) {
+        {{ ingredient.seasons[0] }}
+        } @else {
+          <ul>
+          @for (season of ingredient.seasons; track season) {
+          <li>
+            {{ season }}
+          </li>
+          }
+        </ul>
+        }
+      </td>
     </ng-container>
     <ng-container matColumnDef="recipe">
       <th mat-header-cell *matHeaderCellDef>Recipe</th>
       <td mat-cell *matCellDef="let ingredient">{{ ingredient.addedBy }}</td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="ingredientColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: ingredientColumns" [ngClass]="row.recipeCooked ? 'cooked' : ''"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: ingredientColumns"
+      [ngClass]="row.recipeCooked ? 'cooked' : ''"
+    ></tr>
   </table>
 </main>
+<footer></footer>

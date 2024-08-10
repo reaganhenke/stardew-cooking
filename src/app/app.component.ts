@@ -4,17 +4,9 @@ import { RouterOutlet } from '@angular/router';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table'
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
-import { Egg, Ingredient, Milk } from './ingredients';
+import { categoryType, Ingredient } from './ingredients';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
-
-export interface Recipe {
-  name: string;
-  imageUrl: string;
-  cooked: boolean;
-  learned: boolean;
-  ingredients: Ingredient[];
-  source: string;
-}
+import { ALLRECIPES, Recipe } from './recipes';
 
 export interface MiniRecipe {
   c: number;
@@ -24,11 +16,6 @@ export interface MiniRecipe {
 export interface MiniIng {
   c: number;
 }
-
-const ALLRECIPES: Recipe[] = [
-  { name: "Fried Egg", imageUrl: "https://stardewvalleywiki.com/mediawiki/images/1/18/Fried_Egg.png", cooked: false, learned: false, ingredients: [new Egg("Fried Egg")], source: "starter" },
-  { name: "Omelet", imageUrl: "https://stardewvalleywiki.com/mediawiki/images/1/12/Omelet.png", cooked: false, learned: false, ingredients: [new Egg("Omelet"), new Milk("Omelet")], source: "starter" }
-]
 
 @Component({
   selector: 'app-root',
@@ -41,10 +28,11 @@ const ALLRECIPES: Recipe[] = [
 export class AppComponent {
   title = 'stardew-ingredients';
   recipeColumns: string[] = ["cooked", "learned", "image", "name", "ingredients", "source"];
-  ingredientColumns: string[] = ["collected", "image", "name", "season", "recipe"];
+  ingredientColumns: string[] = ["collected", "image", "name", "category", "season", "recipe"];
   recipeDataSource = new MatTableDataSource(ALLRECIPES);
   ingredientDataSource = new MatTableDataSource(this.generateIngredients());
   hideUsedIngredients = new FormControl(false);
+  categoryType = categoryType;
   @ViewChild('recipeSort', { static: false }) recipeSort!: MatSort;
   @ViewChild('ingredientSort', { static: false }) ingredientSort!: MatSort;
 
