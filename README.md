@@ -7,10 +7,10 @@ version 17.0.5.
 - [x] Download images and call them locally
 - [x] Enter actual recipe/ingredient data
 - [x] Handle multiples of ingredients
+- [x] Add favicon
 - [ ] Add styled header/footer with credits
 - [ ] Style better (fix column widths)
 - [ ] Update this README
-- [ ] Add favicon
 - [ ] Add type sections to Ingredients table
 - [ ] Add text filter to search for items
 - [ ] Add filters to look at only certain categories at a time? 
