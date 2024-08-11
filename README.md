@@ -14,10 +14,10 @@ version 17.0.5.
 - [x] add "skip to ingredients" button
 - [x] style checkboxes
 - [x] Add text filter to search for items
+- [x] Add a reset (clear all checks)
 - [ ] fix sort for seasons
 - [ ] add version control to the key thats saved
 - [ ] maybe add type of recipe source, so you can sort by that? even if its not displayed?
-- [ ] Add a reset (clear all checks)
 - [ ] Update this README
 
 stretch goals

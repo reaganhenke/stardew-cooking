@@ -156,4 +156,19 @@ export class AppComponent {
     this.ingredientDataSource.filter = JSON.stringify(this.currentFilter);
     this.cdRef.detectChanges()
   }
+
+  reset() {
+    localStorage.removeItem('stardewcooking');
+    this.recipeDataSource.data.forEach(recipe => {
+      recipe.cooked = false;
+      recipe.learned = false;
+    });
+    this.ingredientDataSource.data.forEach(ing => {
+      ing.collected = false;
+      ing.recipeCooked = false;
+    });
+    this.ingNameSearch.setValue('');
+    this.currentFilter.substring = '';
+    this.ingredientDataSource.filter = JSON.stringify(this.currentFilter);
+  }
 }
