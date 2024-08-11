@@ -27,8 +27,8 @@ export interface MiniIng {
 })
 export class AppComponent {
   title = 'stardew-ingredients';
-  recipeColumns: string[] = ["cooked", "learned", "image", "name", "ingredients", "source"];
-  ingredientColumns: string[] = ["collected", "image", "name", "category", "season", "recipe"];
+  recipeColumns: string[] = ["cooked", "learned", "name", "ingredients", "source"];
+  ingredientColumns: string[] = ["collected", "name", "category", "season", "recipe"];
   recipeDataSource = new MatTableDataSource(ALLRECIPES);
   ingredientDataSource = new MatTableDataSource(this.generateIngredients());
   hideUsedIngredients = new FormControl(false);

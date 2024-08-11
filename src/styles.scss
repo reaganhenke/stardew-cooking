@@ -1,5 +1,12 @@
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  --mat-table-row-item-outline-color: #a6bbc9;
+}
+body {
+  background-color: #efefef;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 table .mdc-label {
   display: none;
@@ -10,4 +17,67 @@ tr.cooked {
   background-color: #dddddd;
   text-decoration: line-through;
   font-style: italic;
+}
+
+tbody td.mat-mdc-cell {
+  background: #D2E6F3;
+}
+
+.mat-mdc-table th.mat-mdc-header-cell {
+  background-color: #03A007;
+  border: 1px solid #007448;
+  box-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 0px 2px #00321f;
+}
+
+.mdc-data-table__table {
+  min-width: auto !important;
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
+}
+
+.mdc-data-table__cell, .mdc-data-table__header-cell {
+  padding: 0 6px 0 6px !important;
+}
+
+.mdc-data-table__header-cell {
+  text-align: center !important;
+}
+
+.mat-sort-header-container {
+  justify-content: center;
+}
+
+td ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 14px;
+}
+
+.mat-column-source {
+  max-width: 240px;
+}
+
+td.mat-mdc-cell {
+  border: 1px solid #a6bbc9;
+  &.mat-column-source,
+  &.mat-column-recipe {
+    border-right: none;
+  }
+  &.mat-column-cooked,
+  &.mat-column-collected {
+    border-left: none;
+  }
+}
+
+.mdc-data-table__row:last-child td.mat-mdc-cell {
+  border-bottom: 2px solid #a6bbc9;
+}
+
+td.mat-mdc-cell.mat-column-cooked,
+td.mat-mdc-cell.mat-column-learned,
+td.mat-mdc-cell.mat-column-collected {
+  text-align: center;
 }
