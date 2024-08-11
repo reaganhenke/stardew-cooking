@@ -10,10 +10,11 @@ version 17.0.5.
 - [x] Add favicon
 - [x] Style better
 - [x] Add styled header/footer with credits
+- [x] fix styling of the sort
 - [ ] add "skip to ingredients" button
+- [ ] style checkboxes
 - [ ] Add text filter to search for items
 - [ ] fix sort for seasons
-- [ ] fix styling of the sort
 - [ ] add version control to the key thats saved
 - [ ] maybe add type of recipe source, so you can sort by that? even if its not displayed?
 - [ ] Update this README

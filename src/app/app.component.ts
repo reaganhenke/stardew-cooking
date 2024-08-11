@@ -7,6 +7,7 @@ import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox
 import { categoryType, Ingredient } from './ingredients';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { ALLRECIPES, Recipe } from './recipes';
+import { SortArrowComponent } from "./sort-arrow/sort-arrow.component";
 
 export interface MiniRecipe {
   c: number;
@@ -20,8 +21,8 @@ export interface MiniIng {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatTableModule, 
-    MatCheckboxModule, MatSortModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterOutlet, MatTableModule,
+    MatCheckboxModule, MatSortModule, ReactiveFormsModule, SortArrowComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

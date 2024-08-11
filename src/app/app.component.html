@@ -17,10 +17,11 @@
     matSort
     mat-table
     [dataSource]="recipeDataSource"
-    c
   >
     <ng-container matColumnDef="cooked">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cooked</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cooked
+        <app-sort-arrow></app-sort-arrow>
+      </th>
       <td mat-cell *matCellDef="let recipe">
         <mat-checkbox
           [checked]="recipe.cooked"
@@ -30,7 +31,9 @@
       </td>
     </ng-container>
     <ng-container matColumnDef="learned">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Learned</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Learned
+        <app-sort-arrow></app-sort-arrow>
+      </th>
       <td mat-cell *matCellDef="let recipe">
         <mat-checkbox
           [checked]="recipe.learned"
@@ -40,7 +43,9 @@
       </td>
     </ng-container>
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name
+        <app-sort-arrow></app-sort-arrow>
+      </th>
       <td mat-cell *matCellDef="let recipe">
         <div class="recipe-name">
           <img [src]="recipe.imageUrl" alt />
@@ -81,7 +86,9 @@
     [dataSource]="ingredientDataSource"
   >
     <ng-container matColumnDef="collected">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Collected</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Collected
+        <app-sort-arrow></app-sort-arrow>
+      </th>
       <td mat-cell *matCellDef="let ingredient">
         <mat-checkbox
           [checked]="ingredient.collected"
@@ -92,7 +99,9 @@
       </td>
     </ng-container>
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name
+        <app-sort-arrow></app-sort-arrow>
+      </th>
       <td mat-cell *matCellDef="let ingredient">
         <div class="ingredient-name">
           <img [src]="ingredient.imageUrl" alt />
@@ -101,13 +110,17 @@
       </td>
     </ng-container>
     <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Category
+        <app-sort-arrow></app-sort-arrow>
+      </th>
       <td mat-cell *matCellDef="let ingredient">
         {{ ingredient.category }}
       </td>
     </ng-container>
     <ng-container matColumnDef="season">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Season</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Season
+        <app-sort-arrow></app-sort-arrow>
+      </th>
       <td mat-cell *matCellDef="let ingredient">
         @if(ingredient.seasons.length === 1) {
         {{ ingredient.seasons[0] }}

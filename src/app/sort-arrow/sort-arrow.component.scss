@@ -1,0 +1,49 @@
+.sort-arrow {
+  height: 12px;
+  width: 12px;
+  opacity: 50%
+}
+
+.stem {
+  background-color: #fff;
+  height: 10px;
+  width: 2px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.pointer {
+  background-color: #fff;
+  width: 6px;
+  height: 2px;
+  position: absolute;
+}
+
+.top-left {
+  top: -1px;
+  left: 0.5px;
+  transform: rotate(-45deg);
+  transform-origin: right;
+}
+
+.top-right {
+  top: -1px;
+  right: 0.5px;
+  transform: rotate(45deg);
+  transform-origin: left;
+}
+
+.bottom-left {
+  bottom: -1px;
+  left: 0.5px;
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+
+.bottom-right {
+  bottom: -1px;
+  right: 0.5px;
+  transform: rotate(-45deg);
+  transform-origin: left;
+}

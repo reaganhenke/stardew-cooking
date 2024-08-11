@@ -1,6 +1,10 @@
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 html {
   --mat-table-row-item-outline-color: #a6bbc9;
+  --mat-sort-arrow-color: #fff;
 }
 body {
   background-color: #efefef;
@@ -20,15 +24,15 @@ tr.cooked {
 }
 
 tbody td.mat-mdc-cell {
-  background: #D2E6F3;
+  background: #d2e6f3;
 }
 
 .mat-mdc-table th.mat-mdc-header-cell {
-  background-color: #03A007;
+  background-color: #03a007;
   border: 1px solid #007448;
   box-shadow: 0px 1px rgba(0, 0, 0, 0.3);
   color: white;
-  text-shadow: 0px 2px #00321f;
+  text-shadow: 0px 1px #00321f;
 }
 
 .mdc-data-table__table {
@@ -38,7 +42,8 @@ tbody td.mat-mdc-cell {
   margin: auto;
 }
 
-.mdc-data-table__cell, .mdc-data-table__header-cell {
+.mdc-data-table__cell,
+.mdc-data-table__header-cell {
   padding: 0 6px 0 6px !important;
 }
 
@@ -80,4 +85,27 @@ td.mat-mdc-cell.mat-column-cooked,
 td.mat-mdc-cell.mat-column-learned,
 td.mat-mdc-cell.mat-column-collected {
   text-align: center;
+}
+
+.mat-sort-header-content {
+  position: relative;
+}
+
+app-sort-arrow {
+  display: none;
+}
+
+.mat-sort-header-container:not(.mat-sort-header-sorted) app-sort-arrow {
+  display: block;
+  position: absolute;
+  left: calc(100% + 6px);
+}
+
+.mat-mdc-table th.mat-mdc-header-cell {
+  &:focus,
+  &:hover {
+    app-sort-arrow {
+      display: none;
+    }
+  }
 }
