@@ -11,7 +11,7 @@ version 17.0.5.
 - [x] Style better
 - [x] Add styled header/footer with credits
 - [x] fix styling of the sort
-- [ ] add "skip to ingredients" button
+- [x] add "skip to ingredients" button
 - [ ] style checkboxes
 - [ ] Add text filter to search for items
 - [ ] fix sort for seasons

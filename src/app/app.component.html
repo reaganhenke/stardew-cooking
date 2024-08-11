@@ -1,149 +1,177 @@
 <header>
   <img src="assets/stardew_logo.png" alt="Stardew Valley" />
-  <h1>Cooking & Ingredients</h1>
+  <div>
+    <h1>Cooking & Ingredients Tracker</h1>
+    <i class="sub-title">
+      by
+      <a href="https://linktr.ee/ifthencreate" target="_blank">IfThenCreate</a>,
+      based on the
+      <a a href="https://stardewvalleywiki.com/Cooking" target="_blank"
+        >Stardew Valley Wiki</a
+      >
+    </i>
+  </div>
 </header>
 <main>
-  <i class="sub-title">
-    by
-    <a href="https://linktr.ee/ifthencreate" target="_blank">IfThenCreate</a>,
-    based on the
-    <a a href="https://stardewvalleywiki.com/Cooking" target="_blank"
-      >Stardew Valley Wiki</a
+  <section id="recipes">
+    <h2>Recipes</h2>
+    <p>
+      Cooking is available after upgrading the farmhouse for the first time. The
+      player must learn each recipe before it is unlocked for cooking, with the
+      exception of Fried Egg, which is available from the start.
+    </p>
+    <div class="button-wrapper">
+      <a class="skip" href="#ingredients">skip to ingredients</a>
+    </div>
+    <table
+      #recipeSort="matSort"
+      matSort
+      mat-table
+      [dataSource]="recipeDataSource"
     >
-  </i>
-  <h2>Recipes</h2>
-  <table
-    #recipeSort="matSort"
-    matSort
-    mat-table
-    [dataSource]="recipeDataSource"
-  >
-    <ng-container matColumnDef="cooked">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Cooked
-        <app-sort-arrow></app-sort-arrow>
-      </th>
-      <td mat-cell *matCellDef="let recipe">
-        <mat-checkbox
-          [checked]="recipe.cooked"
-          (change)="cook($event, recipe)"
-          >{{ recipe.cooked }}</mat-checkbox
-        >
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="learned">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Learned
-        <app-sort-arrow></app-sort-arrow>
-      </th>
-      <td mat-cell *matCellDef="let recipe">
-        <mat-checkbox
-          [checked]="recipe.learned"
-          (change)="learn($event, recipe)"
-          >{{ recipe.learned }}</mat-checkbox
-        >
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name
-        <app-sort-arrow></app-sort-arrow>
-      </th>
-      <td mat-cell *matCellDef="let recipe">
-        <div class="recipe-name">
-          <img [src]="recipe.imageUrl" alt />
-          <div>{{ recipe.name }}</div>
-        </div>
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="ingredients">
-      <th mat-header-cell *matHeaderCellDef>Ingredients</th>
-      <td mat-cell *matCellDef="let recipe">
-        <ul>
-          @for (ing of recipe.ingredients; track ing) {
-          <li [ngClass]="ing.collected ? 'collected' : ''">
-            {{ ing.name }} ({{ ing.quantity }})
-          </li>
+      <ng-container matColumnDef="cooked">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Cooked
+          <app-sort-arrow></app-sort-arrow>
+        </th>
+        <td mat-cell *matCellDef="let recipe">
+          <mat-checkbox
+            [checked]="recipe.cooked"
+            (change)="cook($event, recipe)"
+            >{{ recipe.cooked }}</mat-checkbox
+          >
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="learned">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Learned
+          <app-sort-arrow></app-sort-arrow>
+        </th>
+        <td mat-cell *matCellDef="let recipe">
+          <mat-checkbox
+            [checked]="recipe.learned"
+            (change)="learn($event, recipe)"
+            >{{ recipe.learned }}</mat-checkbox
+          >
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Name
+          <app-sort-arrow></app-sort-arrow>
+        </th>
+        <td mat-cell *matCellDef="let recipe">
+          <div class="recipe-name">
+            <img [src]="recipe.imageUrl" alt />
+            <div>{{ recipe.name }}</div>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="ingredients">
+        <th mat-header-cell *matHeaderCellDef>Ingredients</th>
+        <td mat-cell *matCellDef="let recipe">
+          <ul>
+            @for (ing of recipe.ingredients; track ing) {
+            <li [ngClass]="ing.collected ? 'collected' : ''">
+              {{ ing.name }} ({{ ing.quantity }})
+            </li>
+            }
+          </ul>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="source">
+        <th mat-header-cell *matHeaderCellDef>Recipe Source(s)</th>
+        <td mat-cell *matCellDef="let recipe">{{ recipe.source }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="recipeColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: recipeColumns"></tr>
+    </table>
+  </section>
+  <section id="ingredients">
+    <h2>Ingredients</h2>
+    <p>
+      A minimum of 88 different types of items are needed to cook all 80 dishes
+      in the game, including crops, foraged goods, tree fruits, animal products,
+      artisan goods, miscellaneous items, fishing items, crab pot items, items
+      from Pierre's General Store, and dishes used as ingredients. The dish
+      ingredients are listed above, in the dishes section, as well as here in
+      the ingredients section so you can track your collection of ingredients.
+    </p>
+    <mat-checkbox
+      [formControl]="hideUsedIngredients"
+      (change)="toggleHideUsedIngredients($event)"
+      >Hide ingredients for recipes that have already been cooked</mat-checkbox
+    >
+    <table
+      mat-table
+      #ingredientSort="matSort"
+      matSort
+      [dataSource]="ingredientDataSource"
+    >
+      <ng-container matColumnDef="collected">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Collected
+          <app-sort-arrow></app-sort-arrow>
+        </th>
+        <td mat-cell *matCellDef="let ingredient">
+          <mat-checkbox
+            [checked]="ingredient.collected"
+            (change)="collect($event, ingredient)"
+            >{{ ingredient.collected }} has recipe been cooked?
+            {{ ingredient.recipeCooked }}</mat-checkbox
+          >
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Name
+          <app-sort-arrow></app-sort-arrow>
+        </th>
+        <td mat-cell *matCellDef="let ingredient">
+          <div class="ingredient-name">
+            <img [src]="ingredient.imageUrl" alt />
+            <div>{{ ingredient.name }} ({{ ingredient.quantity }})</div>
+          </div>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Category
+          <app-sort-arrow></app-sort-arrow>
+        </th>
+        <td mat-cell *matCellDef="let ingredient">
+          {{ ingredient.category }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="season">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>
+          Season
+          <app-sort-arrow></app-sort-arrow>
+        </th>
+        <td mat-cell *matCellDef="let ingredient">
+          @if(ingredient.seasons.length === 1) {
+          {{ ingredient.seasons[0] }}
+          } @else {
+          <div class="multi-seasons">
+            @for (season of ingredient.seasons; track season) {
+            <div>{{ season }}</div>
+            }
+          </div>
           }
-        </ul>
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="source">
-      <th mat-header-cell *matHeaderCellDef>Recipe Source(s)</th>
-      <td mat-cell *matCellDef="let recipe">{{ recipe.source }}</td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="recipeColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: recipeColumns"></tr>
-  </table>
-
-  <h2>Ingredients</h2>
-  <mat-checkbox
-    [formControl]="hideUsedIngredients"
-    (change)="toggleHideUsedIngredients($event)"
-    >Hide ingredients for recipes that have already been cooked</mat-checkbox
-  >
-  <table
-    mat-table
-    #ingredientSort="matSort"
-    matSort
-    [dataSource]="ingredientDataSource"
-  >
-    <ng-container matColumnDef="collected">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Collected
-        <app-sort-arrow></app-sort-arrow>
-      </th>
-      <td mat-cell *matCellDef="let ingredient">
-        <mat-checkbox
-          [checked]="ingredient.collected"
-          (change)="collect($event, ingredient)"
-          >{{ ingredient.collected }} has recipe been cooked?
-          {{ ingredient.recipeCooked }}</mat-checkbox
-        >
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name
-        <app-sort-arrow></app-sort-arrow>
-      </th>
-      <td mat-cell *matCellDef="let ingredient">
-        <div class="ingredient-name">
-          <img [src]="ingredient.imageUrl" alt />
-          <div>{{ ingredient.name }} ({{ ingredient.quantity }})</div>
-        </div>
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Category
-        <app-sort-arrow></app-sort-arrow>
-      </th>
-      <td mat-cell *matCellDef="let ingredient">
-        {{ ingredient.category }}
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="season">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Season
-        <app-sort-arrow></app-sort-arrow>
-      </th>
-      <td mat-cell *matCellDef="let ingredient">
-        @if(ingredient.seasons.length === 1) {
-        {{ ingredient.seasons[0] }}
-        } @else {
-        <div class="multi-seasons">
-          @for (season of ingredient.seasons; track season) {
-          <div>{{ season }}</div>
-          }
-        </div>
-        }
-      </td>
-    </ng-container>
-    <ng-container matColumnDef="recipe">
-      <th mat-header-cell *matHeaderCellDef>Recipe</th>
-      <td mat-cell *matCellDef="let ingredient">{{ ingredient.addedBy }}</td>
-    </ng-container>
-    <tr mat-header-row *matHeaderRowDef="ingredientColumns"></tr>
-    <tr
-      mat-row
-      *matRowDef="let row; columns: ingredientColumns"
-      [ngClass]="row.recipeCooked ? 'cooked' : ''"
-    ></tr>
-  </table>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="recipe">
+        <th mat-header-cell *matHeaderCellDef>Recipe</th>
+        <td mat-cell *matCellDef="let ingredient">{{ ingredient.addedBy }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="ingredientColumns"></tr>
+      <tr
+        mat-row
+        *matRowDef="let row; columns: ingredientColumns"
+        [ngClass]="row.recipeCooked ? 'cooked' : ''"
+      ></tr>
+    </table>
+  </section>
 </main>
 <footer>
   <div class="footer-cover">
@@ -166,8 +194,8 @@
     </p>
     <div>
       <a href="https://github.com/reaganhenke/stardew-cooking" target="_blank"
-        ><img src="assets/github.svg" alt="Github"></a
-      >
+        ><img src="assets/github.svg" alt="Github"
+      /></a>
     </div>
   </div>
 </footer>
