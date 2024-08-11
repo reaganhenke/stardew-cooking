@@ -97,11 +97,20 @@
       ingredients are listed above, in the dishes section, as well as here in
       the ingredients section so you can track your collection of ingredients.
     </p>
-    <mat-checkbox
-      [formControl]="hideUsedIngredients"
-      (change)="toggleHideUsedIngredients($event)"
-      >Hide ingredients for recipes that have already been cooked</mat-checkbox
-    >
+    <div class="ingredient-controls">
+      <mat-checkbox
+        [formControl]="hideUsedIngredients"
+        (change)="toggleHideUsedIngredients($event)"
+        >Hide ingredients for cooked recipes</mat-checkbox
+      >
+      <input
+        id="search-ingredients"
+        type="text"
+        placeholder="Search"
+        [formControl]="ingNameSearch"
+        (keyup)="handleSearch()"
+        />
+    </div>
     <table
       mat-table
       #ingredientSort="matSort"

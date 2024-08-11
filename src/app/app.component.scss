@@ -81,6 +81,22 @@ main {
   }
 }
 
+.ingredient-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  mat-checkbox {
+    margin-left: -10px;
+  }
+  input {
+    border: 1px solid #7f909c;
+    // color: #3a3a3a;
+    padding: 6px 10px;
+    border-radius: 4px;
+    box-shadow: 1px 1px #3f3f3f5e;
+  }
+}
+
 footer {
   background: url("/assets/stardewbackground.png");
   background-size: cover;
