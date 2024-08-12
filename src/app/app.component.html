@@ -117,6 +117,7 @@
       #ingredientSort="matSort"
       matSort
       [dataSource]="ingredientDataSource"
+      (matSortChange)="sortSeasons($event)"
     >
       <ng-container matColumnDef="collected">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>

@@ -2,9 +2,9 @@ import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table'
-import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatSort, MatSortModule, Sort } from '@angular/material/sort';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
-import { categoryType, Ingredient } from './ingredients';
+import { categoryType, Ingredient, seasonType } from './ingredients';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { ALLRECIPES, Recipe } from './recipes';
 import { SortArrowComponent } from "./sort-arrow/sort-arrow.component";
@@ -86,6 +86,41 @@ export class AppComponent {
     this.cdRef.detectChanges()
   }
 
+  sortSeasons(s: Sort) {
+    if (s.active == "season") {
+      const ingDataCopy = this.ingredientDataSource.data.slice();
+
+      this.ingredientDataSource.data = ingDataCopy.sort((a, b) => {
+        const isAsc = s.direction === 'asc';
+        return compare(a.seasons, b.seasons, isAsc);
+      });
+
+      function compare(a: seasonType[], b: seasonType[], isAsc: boolean) {
+
+        let aFocus = a.reduce((c, d) => (getSeasonValue(c) < getSeasonValue(d) && isAsc) ? c : d);
+        let bFocus = b.reduce((c, d) => (getSeasonValue(c) < getSeasonValue(d) && isAsc) ? c : d);
+
+        return (getSeasonValue(aFocus) < getSeasonValue(bFocus) ? -1 : 1) * (isAsc ? 1 : -1);
+      }
+
+      function getSeasonValue(season: seasonType): number {
+        switch (season) {
+          case seasonType.Spring:
+            return 0;
+          case seasonType.Summer:
+            return 1;
+          case seasonType.Fall:
+            return 2;
+          case seasonType.Winter:
+            return 3;
+          default:
+            return 4;
+        }
+      }
+    }
+  }
+
+
   generateIngredients(): Ingredient[] {
     let allIngredients: Ingredient[] = [];
     ALLRECIPES.forEach(recipe => {
@@ -129,7 +164,7 @@ export class AppComponent {
   }
 
   loadFromBrowser(): string | null {
-    return localStorage.getItem('stardewcooking')
+    return localStorage.getItem('stardewcooking_v1')
   }
 
   shorten(b: boolean): number {
@@ -146,9 +181,7 @@ export class AppComponent {
       ingredients: this.ingredientDataSource.data.map(i => { return { c: this.shorten(i.collected) } })
     }
 
-    // console.log("save: ", JSON.stringify(dataObj));
-
-    localStorage.setItem('stardewcooking', JSON.stringify(dataObj));
+    localStorage.setItem('stardewcooking_v1', JSON.stringify(dataObj));
   }
 
   handleSearch() {
@@ -158,7 +191,7 @@ export class AppComponent {
   }
 
   reset() {
-    localStorage.removeItem('stardewcooking');
+    localStorage.removeItem('stardewcooking_v1');
     this.recipeDataSource.data.forEach(recipe => {
       recipe.cooked = false;
       recipe.learned = false;
