@@ -564,8 +564,7 @@ export const ALLRECIPES: Recipe[] = [
     cooked: false,
     learned: false,
     ingredients: [
-      new CaveCarrot("Miner's Treat"),
-      new CaveCarrot("Miner's Treat"),
+      new CaveCarrot("Miner's Treat", 2),
       new Sugar("Miner's Treat"),
       new Milk("Miner's Treat"),
     ],
@@ -630,8 +629,7 @@ export const ALLRECIPES: Recipe[] = [
     cooked: false,
     learned: false,
     ingredients: [
-      new WildPlum("Plum Pudding"),
-      new WildPlum("Plum Pudding"),
+      new WildPlum("Plum Pudding", 2),
       new WheatFlour("Plum Pudding"),
       new Sugar("Plum Pudding"),
     ],
