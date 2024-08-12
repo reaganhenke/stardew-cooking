@@ -1,4 +1,4 @@
-# Stardew Valley - Cooking and Ingredients Traffic
+# Stardew Valley - Cooking and Ingredients Tracker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
 version 17.0.5 by [IfThenCreate](https://linktr.ee/ifthencreate). 

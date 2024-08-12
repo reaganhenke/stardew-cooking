@@ -100,7 +100,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/stardew-ingredients/",
+            "baseHref": "/stardew-cooking/",
             "buildTarget": "stardew-ingredients:build:production",
             "repo": "https://github.com/reaganhenke/stardew-cooking"
           }
