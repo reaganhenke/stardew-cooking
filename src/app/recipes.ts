@@ -12,7 +12,7 @@ export interface Recipe {
 export const ALLRECIPES: Recipe[] = [
   {
     name: "Fried Egg", 
-    imageUrl: "/assets/recipes/fried_egg.png", 
+    imageUrl: "assets/recipes/fried_egg.png", 
     cooked: false, 
     learned: false, 
     ingredients: [new Egg("Fried Egg")],
@@ -20,7 +20,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Omelet",
-    imageUrl: "/assets/recipes/omelet.png",
+    imageUrl: "assets/recipes/omelet.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -30,7 +30,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Salad",
-    imageUrl: "/assets/recipes/salad.png",
+    imageUrl: "assets/recipes/salad.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -42,7 +42,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Cheese Cauliflower",
-    imageUrl: "/assets/recipes/cheese_cauliflower.png",
+    imageUrl: "assets/recipes/cheese_cauliflower.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -53,7 +53,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Baked Fish",
-    imageUrl: "/assets/recipes/baked_fish.png",
+    imageUrl: "assets/recipes/baked_fish.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -65,7 +65,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Parsnip Soup",
-    imageUrl: "/assets/recipes/parsnip_soup.png",
+    imageUrl: "assets/recipes/parsnip_soup.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -77,7 +77,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Vegetable Medley",
-    imageUrl: "/assets/recipes/vegetable_medley.png",
+    imageUrl: "assets/recipes/vegetable_medley.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -88,7 +88,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Complete Breakfast",
-    imageUrl: "/assets/recipes/complete_breakfast.png",
+    imageUrl: "assets/recipes/complete_breakfast.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -101,7 +101,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Fried Calamari",
-    imageUrl: "/assets/recipes/fried_calamari.png",
+    imageUrl: "assets/recipes/fried_calamari.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -113,7 +113,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Strange Bun",
-    imageUrl: "/assets/recipes/strange_bun.png",
+    imageUrl: "assets/recipes/strange_bun.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -125,7 +125,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Lucky Lunch",
-    imageUrl: "/assets/recipes/lucky_lunch.png",
+    imageUrl: "assets/recipes/lucky_lunch.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -137,7 +137,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Fried Mushroom",
-    imageUrl: "/assets/recipes/fried_mushroom.png",
+    imageUrl: "assets/recipes/fried_mushroom.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -149,7 +149,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Pizza",
-    imageUrl: "/assets/recipes/pizza.png",
+    imageUrl: "assets/recipes/pizza.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -161,7 +161,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Bean Hotpot",
-    imageUrl: "/assets/recipes/bean_hotpot.png",
+    imageUrl: "assets/recipes/bean_hotpot.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -171,7 +171,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Glazed Yams",
-    imageUrl: "/assets/recipes/glazed_yams.png",
+    imageUrl: "assets/recipes/glazed_yams.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -182,7 +182,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Carp Surprise",
-    imageUrl: "/assets/recipes/carp_surprise.png",
+    imageUrl: "assets/recipes/carp_surprise.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -192,7 +192,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Hashbrowns",
-    imageUrl: "/assets/recipes/hashbrowns.png",
+    imageUrl: "assets/recipes/hashbrowns.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -203,7 +203,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Pancakes",
-    imageUrl: "/assets/recipes/pancakes.png",
+    imageUrl: "assets/recipes/pancakes.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -214,7 +214,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Salmon Dinner",
-    imageUrl: "/assets/recipes/salmon_dinner.png",
+    imageUrl: "assets/recipes/salmon_dinner.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -226,7 +226,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Fish Taco",
-    imageUrl: "/assets/recipes/fish_taco.png",
+    imageUrl: "assets/recipes/fish_taco.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -239,7 +239,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Crispy Bass",
-    imageUrl: "/assets/recipes/crispy_bass.png",
+    imageUrl: "assets/recipes/crispy_bass.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -252,7 +252,7 @@ export const ALLRECIPES: Recipe[] = [
 
   { 
     name: "Pepper Poppers",
-    imageUrl: "/assets/recipes/pepper_poppers.png",
+    imageUrl: "assets/recipes/pepper_poppers.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -263,7 +263,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Bread",
-    imageUrl: "/assets/recipes/bread.png",
+    imageUrl: "assets/recipes/bread.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -273,7 +273,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Tom Kha Soup",
-    imageUrl: "/assets/recipes/tom_kha_soup.png",
+    imageUrl: "assets/recipes/tom_kha_soup.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -285,7 +285,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Trout Soup",
-    imageUrl: "/assets/recipes/trout_soup.png",
+    imageUrl: "assets/recipes/trout_soup.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -296,7 +296,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Chocolate Cake",
-    imageUrl: "/assets/recipes/chocolate_cake.png",
+    imageUrl: "assets/recipes/chocolate_cake.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -308,7 +308,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Pink Cake",
-    imageUrl: "/assets/recipes/pink_cake.png",
+    imageUrl: "assets/recipes/pink_cake.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -321,7 +321,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Rhubarb Pie",
-    imageUrl: "/assets/recipes/rhubarb_pie.png",
+    imageUrl: "assets/recipes/rhubarb_pie.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -334,7 +334,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Cookie",
-    imageUrl: "/assets/recipes/cookie.png",
+    imageUrl: "assets/recipes/cookie.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -346,7 +346,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Spaghetti",
-    imageUrl: "/assets/recipes/spaghetti.png",
+    imageUrl: "assets/recipes/spaghetti.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -357,7 +357,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Fried Eel",
-    imageUrl: "/assets/recipes/fried_eel.png",
+    imageUrl: "assets/recipes/fried_eel.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -368,7 +368,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Spicy Eel",
-    imageUrl: "/assets/recipes/spicy_eel.png",
+    imageUrl: "assets/recipes/spicy_eel.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -379,7 +379,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Sashimi",
-    imageUrl: "/assets/recipes/sashimi.png",
+    imageUrl: "assets/recipes/sashimi.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -389,7 +389,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Maki Roll",
-    imageUrl: "/assets/recipes/maki_roll.png",
+    imageUrl: "assets/recipes/maki_roll.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -401,7 +401,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Tortilla",
-    imageUrl: "/assets/recipes/tortilla.png",
+    imageUrl: "assets/recipes/tortilla.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -411,7 +411,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Red Plate",
-    imageUrl: "/assets/recipes/red_plate.png",
+    imageUrl: "assets/recipes/red_plate.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -422,7 +422,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Eggplant Parmesan",
-    imageUrl: "/assets/recipes/eggplant_parmesan.png",
+    imageUrl: "assets/recipes/eggplant_parmesan.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -433,7 +433,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Rice Pudding",
-    imageUrl: "/assets/recipes/rice_pudding.png",
+    imageUrl: "assets/recipes/rice_pudding.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -445,7 +445,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Ice Cream",
-    imageUrl: "/assets/recipes/ice_cream.png",
+    imageUrl: "assets/recipes/ice_cream.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -456,7 +456,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Blueberry Tart",
-    imageUrl: "/assets/recipes/blueberry_tart.png",
+    imageUrl: "assets/recipes/blueberry_tart.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -469,7 +469,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Autumn's Bounty",
-    imageUrl: "/assets/recipes/autumns_bounty.png",
+    imageUrl: "assets/recipes/autumns_bounty.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -480,7 +480,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Pumpkin Soup",
-    imageUrl: "/assets/recipes/pumpkin_soup.png",
+    imageUrl: "assets/recipes/pumpkin_soup.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -491,7 +491,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Super Meal",
-    imageUrl: "/assets/recipes/super_meal.png",
+    imageUrl: "assets/recipes/super_meal.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -503,7 +503,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Cranberry Sauce",
-    imageUrl: "/assets/recipes/cranberry_sauce.png",
+    imageUrl: "assets/recipes/cranberry_sauce.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -514,7 +514,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Stuffing",
-    imageUrl: "/assets/recipes/stuffing.png",
+    imageUrl: "assets/recipes/stuffing.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -526,7 +526,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Farmer's Lunch",
-    imageUrl: "/assets/recipes/farmers_lunch.png",
+    imageUrl: "assets/recipes/farmers_lunch.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -537,7 +537,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Survival Burger",
-    imageUrl: "/assets/recipes/survival_burger.png",
+    imageUrl: "assets/recipes/survival_burger.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -549,7 +549,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Dish O' The Sea",
-    imageUrl: "/assets/recipes/dish_o_the_sea.png",
+    imageUrl: "assets/recipes/dish_o_the_sea.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -560,7 +560,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Miner's Treat",
-    imageUrl: "/assets/recipes/miners_treat.png",
+    imageUrl: "assets/recipes/miners_treat.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -572,7 +572,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Roots Platter",
-    imageUrl: "/assets/recipes/roots_platter.png",
+    imageUrl: "assets/recipes/roots_platter.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -583,7 +583,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Triple Shot Espresso",
-    imageUrl: "/assets/recipes/triple_shot_espresso.png",
+    imageUrl: "assets/recipes/triple_shot_espresso.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -593,7 +593,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Seafoam Pudding",
-    imageUrl: "/assets/recipes/seafoam_pudding.png",
+    imageUrl: "assets/recipes/seafoam_pudding.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -605,7 +605,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Algae Soup",
-    imageUrl: "/assets/recipes/algae_soup.png",
+    imageUrl: "assets/recipes/algae_soup.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -615,7 +615,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Pale Broth",
-    imageUrl: "/assets/recipes/pale_broth.png",
+    imageUrl: "assets/recipes/pale_broth.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -625,7 +625,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Plum Pudding",
-    imageUrl: "/assets/recipes/plum_pudding.png",
+    imageUrl: "assets/recipes/plum_pudding.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -637,7 +637,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Artichoke Dip",
-    imageUrl: "/assets/recipes/artichoke_dip.png",
+    imageUrl: "assets/recipes/artichoke_dip.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -648,7 +648,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Stir Fry",
-    imageUrl: "/assets/recipes/stir_fry.png",
+    imageUrl: "assets/recipes/stir_fry.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -661,7 +661,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Roasted Hazelnuts",
-    imageUrl: "/assets/recipes/roasted_hazelnuts.png",
+    imageUrl: "assets/recipes/roasted_hazelnuts.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -671,7 +671,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Pumpkin Pie",
-    imageUrl: "/assets/recipes/pumpkin_pie.png",
+    imageUrl: "assets/recipes/pumpkin_pie.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -684,7 +684,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Radish Salad",
-    imageUrl: "/assets/recipes/radish_salad.png",
+    imageUrl: "assets/recipes/radish_salad.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -696,7 +696,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Fruit Salad",
-    imageUrl: "/assets/recipes/fruit_salad.png",
+    imageUrl: "assets/recipes/fruit_salad.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -708,7 +708,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Blackberry Cobbler",
-    imageUrl: "/assets/recipes/blackberry_cobbler.png",
+    imageUrl: "assets/recipes/blackberry_cobbler.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -720,7 +720,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Cranberry Candy",
-    imageUrl: "/assets/recipes/cranberry_candy.png",
+    imageUrl: "assets/recipes/cranberry_candy.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -732,7 +732,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Bruschetta",
-    imageUrl: "/assets/recipes/bruschetta.png",
+    imageUrl: "assets/recipes/bruschetta.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -744,7 +744,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Coleslaw",
-    imageUrl: "/assets/recipes/coleslaw.png",
+    imageUrl: "assets/recipes/coleslaw.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -756,7 +756,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Fiddlehead Risotto",
-    imageUrl: "/assets/recipes/fiddlehead_risotto.png",
+    imageUrl: "assets/recipes/fiddlehead_risotto.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -768,7 +768,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Poppyseed Muffin",
-    imageUrl: "/assets/recipes/poppyseed_muffin.png",
+    imageUrl: "assets/recipes/poppyseed_muffin.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -780,7 +780,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Chowder",
-    imageUrl: "/assets/recipes/chowder.png",
+    imageUrl: "assets/recipes/chowder.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -791,7 +791,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Fish Stew",
-    imageUrl: "/assets/recipes/fish_stew.png",
+    imageUrl: "assets/recipes/fish_stew.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -804,7 +804,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Escargot",
-    imageUrl: "/assets/recipes/escargot.png",
+    imageUrl: "assets/recipes/escargot.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -815,7 +815,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Lobster Bisque",
-    imageUrl: "/assets/recipes/lobster_bisque.png",
+    imageUrl: "assets/recipes/lobster_bisque.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -826,7 +826,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Maple Bar",
-    imageUrl: "/assets/recipes/maple_bar.png",
+    imageUrl: "assets/recipes/maple_bar.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -838,7 +838,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Crab Cakes",
-    imageUrl: "/assets/recipes/crab_cakes.png",
+    imageUrl: "assets/recipes/crab_cakes.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -851,7 +851,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Shrimp Cocktail",
-    imageUrl: "/assets/recipes/shrimp_cocktail.png",
+    imageUrl: "assets/recipes/shrimp_cocktail.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -863,7 +863,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Ginger Ale",
-    imageUrl: "/assets/recipes/ginger_ale.png",
+    imageUrl: "assets/recipes/ginger_ale.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -874,7 +874,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Banana Pudding",
-    imageUrl: "/assets/recipes/banana_pudding.png",
+    imageUrl: "assets/recipes/banana_pudding.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -886,7 +886,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Mango Sticky Rice",
-    imageUrl: "/assets/recipes/mango_sticky_rice.png",
+    imageUrl: "assets/recipes/mango_sticky_rice.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -898,7 +898,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Poi",
-    imageUrl: "/assets/recipes/poi.png",
+    imageUrl: "assets/recipes/poi.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -908,7 +908,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Tropical Curry",
-    imageUrl: "/assets/recipes/tropical_curry.png",
+    imageUrl: "assets/recipes/tropical_curry.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -920,7 +920,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Squid Ink Ravioli",
-    imageUrl: "/assets/recipes/squid_ink_ravioli.png",
+    imageUrl: "assets/recipes/squid_ink_ravioli.png",
     cooked: false,
     learned: false,
     ingredients: [
@@ -932,7 +932,7 @@ export const ALLRECIPES: Recipe[] = [
   },
   { 
     name: "Moss Soup",
-    imageUrl: "/assets/recipes/moss_soup.png",
+    imageUrl: "assets/recipes/moss_soup.png",
     cooked: false,
     learned: false,
     ingredients: [
