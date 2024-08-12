@@ -96,6 +96,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/stardew-ingredients/",
+            "buildTarget": "stardew-ingredients:build:production",
+            "repo": "https://github.com/reaganhenke/stardew-cooking"
+          }
         }
       }
     }
