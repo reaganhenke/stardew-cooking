@@ -3,12 +3,14 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
 version 17.0.5 by [IfThenCreate](https://linktr.ee/ifthencreate). 
 
-## Future Updates
-- [ ] Maybe add "type" of recipe source, so you can sort by that, even if its not displayed?
-- [ ] Add filters to Ingredients Table to look at only certain categories at a time? 
-- [ ] Track or filter loved items? 
-- [ ] Maybe add a display for the recipes in the box how they show up in game?
-- [ ] Make sources plural? Some can be gotten in multiple ways 
+Still a work in progress! Feel free to suggest improvements or open an issue. 
+
+## Possible Future Updates
+- [ ] Maybe add "type" of recipe source, so you can sort by that (even if it's not displayed)
+- [ ] Add filters to Ingredients Table to look at only certain categories at a time
+- [ ] Track or filter loved items? Would be nice to know what to cook for gifts
+- [ ] Maybe add a toggle to display the recipes how they show up in game?
+- [ ] Maybe add a filter to hide cooked recipes from the recipe list
 
 ## Development 
 

@@ -185,7 +185,7 @@ export class AppComponent {
   }
 
   handleSearch() {
-    this.currentFilter.substring = this.ingNameSearch.value?.trim() || '';
+    this.currentFilter.substring = this.ingNameSearch.value?.trim().toLowerCase() || '';
     this.ingredientDataSource.filter = JSON.stringify(this.currentFilter);
     this.cdRef.detectChanges()
   }
